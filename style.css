@@ -1,6 +1,6 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -50,29 +50,183 @@ a:link, a:visited {
   font-size: 1.6rem;
 }
 
-nav {
-  height: 10rem;
+header {
+  position: relative;
+  height: 0;
 }
 
-header {
+header input {
+  visibility: hidden;
+}
+
+header input:checked + label span {
+  background-color: transparent;
+  background-image: none;
+}
+
+header input:checked + label span::before, header input:checked + label span::after {
+  top: 0;
+}
+
+header input:checked + label span::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+header input:checked + label span::after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+header input:checked ~ .content {
+  width: 100%;
+}
+
+header input:checked ~ .content ul {
+  -webkit-transform: scale(1) translate(-50%, -50%);
+          transform: scale(1) translate(-50%, -50%);
+}
+
+header label {
+  top: 4rem;
+  right: 4rem;
+  width: 6rem;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f0f8ff;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6);
+  background-image: radial-gradient(rgba(65, 105, 225, 0.5), rgba(32, 178, 170, 0.8));
+  cursor: pointer;
+  z-index: 2;
+}
+
+header label:hover span::before {
+  top: -0.8rem;
+}
+
+header label:hover span::after {
+  top: 0.8rem;
+}
+
+header label span {
+  position: relative;
+}
+
+header label span, header label span::before, header label span::after {
+  display: inline-block;
+  width: 2.7rem;
+  height: 2px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4169e1), to(#777));
+  background-image: linear-gradient(#4169e1, #777);
+  background-color: #f0f8ff;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+header label span::before, header label span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+header label span::before {
+  top: -0.7rem;
+}
+
+header label span::after {
+  top: 0.7rem;
+}
+
+header .content {
+  width: 0;
+  height: 100vh;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #f0f8ff;
+  background-image: radial-gradient(rgba(0, 191, 255, 0.7), rgba(32, 178, 170, 0.7));
+  z-index: 1;
+}
+
+header .content ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  list-style: none;
+  font-size: 3rem;
+  color: #f0f8ff;
+}
+
+header .content ul li {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  cursor: pointer;
+  background-size: 220%;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #f0f8ff 50%);
+}
+
+header .content ul li:hover {
+  background-position: 100%;
+  color: #4169e1;
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
+}
+
+@media (max-width: 56.25em) {
+  header .content ul {
+    width: 60%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  header .content ul {
+    font-size: 2rem;
+    width: 85%;
+  }
+}
+
+.loader {
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
-  height: 90vh;
+  height: 95vh;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(65, 105, 225, 0.6)), to(rgba(0, 191, 255, 0.8))), url(./img/hero.jpg);
-  background-image: linear-gradient(to right, rgba(65, 105, 225, 0.6), rgba(0, 191, 255, 0.8)), url(./img/hero.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(65, 105, 225, 0.6)), to(rgba(0, 191, 255, 0.8))), url(./assets/hero.jpg);
+  background-image: linear-gradient(to right, rgba(65, 105, 225, 0.6), rgba(0, 191, 255, 0.8)), url(./assets/hero.jpg);
   background-size: cover;
   position: relative;
 }
 
-header .logo img {
-  width: 25rem;
-  margin-top: -14rem;
+.loader .logo img {
+  width: 20rem;
+  margin-top: -2rem;
+  margin-left: -2rem;
   -webkit-filter: invert(1);
           filter: invert(1);
 }
 
-header .hero {
+.loader .hero {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -83,19 +237,19 @@ header .hero {
   text-align: center;
 }
 
-header .hero h1 {
+.loader .hero h1 {
   font-weight: 700;
 }
 
-header .hero p {
+.loader .hero p {
   margin-top: 4rem;
 }
 
-header .hero a {
+.loader .hero a {
   margin-top: 10rem;
 }
 
-header .hero a:link, header .hero a:visited {
+.loader .hero a:link, .loader .hero a:visited {
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
   color: inherit;
@@ -106,18 +260,39 @@ header .hero a:link, header .hero a:visited {
   display: inline-block;
 }
 
-header .hero a:hover {
+.loader .hero a:hover {
   -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8);
           box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8);
   -webkit-transform: translateY(-0.7rem);
           transform: translateY(-0.7rem);
 }
 
-header .hero a:active {
+.loader .hero a:active {
   -webkit-box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
           box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
   -webkit-transform: translateY(-0.2rem);
           transform: translateY(-0.2rem);
+}
+
+@media (max-width: 56.25em) {
+  .loader .hero {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .loader .hero h3 {
+    margin-top: 5rem;
+    font-size: 1.5rem;
+  }
+  .loader .hero h1 {
+    font-size: 2rem;
+  }
+  .loader .hero a {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    margin-top: 5rem;
+  }
 }
 
 .service {
@@ -190,6 +365,40 @@ header .hero a:active {
           hyphens: auto;
 }
 
+@media (max-width: 75em) {
+  .service {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30rem 30rem;
+        grid-template-columns: 30rem 30rem;
+    gap: 8rem;
+  }
+  .service .card:last-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .service {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5rem;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .details {
   -webkit-box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
           box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
@@ -257,6 +466,34 @@ header .hero a:active {
   text-align: justify;
   display: inline-block;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 75em) {
+  .details {
+    padding: 20rem 5rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .details {
+    padding: 20rem 2rem;
+  }
+  .details .left {
+    padding: 0 1.5rem;
+  }
+  .details .right {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 5rem;
+  }
 }
 
 .repair {
@@ -344,6 +581,32 @@ header .hero a:active {
           clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (max-width: 75em) {
+  .repair {
+    padding: 20rem 2rem;
+  }
+  .repair .content-1 .p-con {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .repair .content-1 .p-con {
+    padding: 4rem 6rem;
+    width: 100%;
+  }
+  .repair .content-1 img {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .repair .content-1 .p-con {
+    padding: 3rem 1rem;
+  }
 }
 
 .experience {
@@ -445,6 +708,53 @@ header .hero a:active {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 1;
+}
+
+@media (max-width: 75em) {
+  .experience h1 {
+    font-size: 3rem;
+  }
+  .experience .story {
+    width: 100%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .experience {
+    padding: 4rem 1rem;
+  }
+  .experience h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.1px;
+    font-weight: 400;
+  }
+  .experience .story {
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+  }
+  .experience .story > * {
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+  }
+  .experience .story .shape {
+    -webkit-transform: translateX(-2rem) skewX(0);
+            transform: translateX(-2rem) skewX(0);
+  }
+}
+
+@media (max-width: 37.5em) {
+  .experience h1 {
+    font-size: 2rem;
+    letter-spacing: 0.1px;
+    font-weight: 400;
+  }
+  .experience .story {
+    padding: 2rem;
+  }
+  .experience .story .shape {
+    -webkit-transform: translateX(-1rem) skewX(0);
+            transform: translateX(-1rem) skewX(0);
+  }
 }
 
 .booking {
@@ -555,8 +865,46 @@ header .hero a:active {
           transform: translateY(0);
 }
 
+@media (max-width: 75em) {
+  .booking .form h1 {
+    font-size: 3rem;
+  }
+  .booking .form .group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .booking {
+    padding: 16rem 10rem;
+  }
+  .booking .form {
+    width: 100%;
+  }
+  .booking .form h1 {
+    font-size: 2.5rem;
+  }
+  .booking .form .group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .booking {
+    padding: 10rem 3rem;
+  }
+  .booking .form {
+    width: 100%;
+  }
+  .booking .form h1 {
+    font-size: 2rem;
+  }
+  .booking .form .group {
+    width: 100%;
+  }
+}
+
 footer {
   padding: 3rem;
   text-align: center;
 }
-/*# sourceMappingURL=style.css.map */
