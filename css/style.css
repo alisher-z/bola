@@ -1,0 +1,562 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html body {
+  font-family: "Lato", sans-serif;
+  color: #777;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+h5 {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#4169e1), to(#00bfff));
+  background-image: linear-gradient(to left bottom, #4169e1, #00bfff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+nav {
+  height: 10rem;
+}
+
+header {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  height: 90vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(65, 105, 225, 0.6)), to(rgba(0, 191, 255, 0.8))), url(./img/hero.jpg);
+  background-image: linear-gradient(to right, rgba(65, 105, 225, 0.6), rgba(0, 191, 255, 0.8)), url(./img/hero.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+header .logo img {
+  width: 25rem;
+  margin-top: -14rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+header .hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #f7f7f7;
+  width: 80%;
+  text-align: center;
+}
+
+header .hero h1 {
+  font-weight: 700;
+}
+
+header .hero p {
+  margin-top: 4rem;
+}
+
+header .hero a {
+  margin-top: 10rem;
+}
+
+header .hero a:link, header .hero a:visited {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  color: inherit;
+  text-transform: uppercase;
+  background-color: #20b2aa;
+  padding: 2rem 3rem;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+header .hero a:hover {
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8);
+          box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateY(-0.7rem);
+          transform: translateY(-0.7rem);
+}
+
+header .hero a:active {
+  -webkit-box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+}
+
+.service {
+  padding: 20rem 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #f0f8ff;
+}
+
+.service .card {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  width: 30rem;
+  height: 40rem;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 3rem;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.service .card:hover {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateY(-1rem) scale(1.05);
+          transform: translateY(-1rem) scale(1.05);
+}
+
+.service .card a {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#4169e1), to(#00bfff));
+  background-image: linear-gradient(to left bottom, #4169e1, #00bfff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 10rem;
+  display: inline-block;
+  line-height: 1;
+}
+
+.service h1 {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#4169e1), to(#00bfff));
+  background-image: linear-gradient(to left bottom, #4169e1, #00bfff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.service p {
+  font-size: 1.6rem;
+  display: inline-block;
+  margin-top: 2rem;
+  text-align: justify;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+}
+
+.details {
+  -webkit-box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+  margin-top: -15rem;
+  padding: 30rem 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-image: radial-gradient(rgba(32, 178, 170, 0.2), rgba(65, 105, 225, 0.2));
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg);
+}
+
+.details > * {
+  -webkit-transform: skewY(10deg);
+          transform: skewY(10deg);
+}
+
+.details .left {
+  padding: 0 3rem;
+}
+
+.details .left h5 {
+  margin-bottom: 2rem;
+}
+
+.details .left p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.details .left p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.details .right {
+  padding: 0 3rem;
+}
+
+.details .right h5 {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#4169e1), to(#00bfff));
+  background-image: linear-gradient(to left bottom, #4169e1, #00bfff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.details .right h5:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.details .right p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: justify;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.repair {
+  padding: 25rem 20rem;
+  background-color: #f0f8ff;
+  margin-top: -15rem;
+}
+
+.repair h1 {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#4169e1), to(#00bfff));
+  background-image: linear-gradient(to left bottom, #4169e1, #00bfff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+.repair .content-1 {
+  background-size: 100%;
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-position: bottom;
+  overflow: hidden;
+}
+
+.repair .content-1 .p1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.repair .content-1 .p-con {
+  padding: 4rem 6rem;
+  width: 50%;
+}
+
+.repair .content-1 .p-con h5 {
+  margin-bottom: 1.5rem;
+}
+
+.repair .content-1 .p-con p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: justify;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  margin-bottom: 0.5rem;
+}
+
+.repair .content-1 .p-con ul {
+  margin-left: 3rem;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.repair .content-1 .p-con ul li {
+  text-align: justify;
+}
+
+.repair .content-1 img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.repair .content-1 .img2 {
+  -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.experience {
+  position: relative;
+  padding: 10rem;
+}
+
+.experience .video {
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.experience .video video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.experience h1 {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#4169e1), to(#00bfff));
+  background-image: linear-gradient(to left bottom, #4169e1, #00bfff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-weight: 900;
+  z-index: -3;
+  margin-bottom: 5rem;
+}
+
+.experience .story {
+  width: 60%;
+  margin: 0 auto;
+  padding: 5rem;
+  padding-left: 7rem;
+  margin-bottom: 10rem;
+  -webkit-transform: skewX(-15deg);
+          transform: skewX(-15deg);
+  background-color: rgba(240, 248, 255, 0.6);
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.experience .story > * {
+  -webkit-transform: skewX(15deg);
+          transform: skewX(15deg);
+}
+
+.experience .story .shape {
+  height: 11rem;
+  width: 11rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateX(-2rem) skewX(15deg);
+          transform: translateX(-2rem) skewX(15deg);
+  position: relative;
+  float: left;
+}
+
+.experience .story .shape img {
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.experience .story .shape figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20%);
+          transform: translate(-50%, 20%);
+  opacity: 0;
+  color: #f0f8ff;
+  font-size: 1.6rem;
+  text-align: center;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.experience .story:hover img {
+  -webkit-filter: blur(3px) brightness(85%);
+          filter: blur(3px) brightness(85%);
+}
+
+.experience .story:hover figcaption {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.booking {
+  padding: 20rem;
+  background-image: radial-gradient(rgba(32, 178, 170, 0.2), rgba(65, 105, 225, 0.2));
+}
+
+.booking .form {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  width: 80%;
+  height: 50rem;
+  margin: 0 auto;
+  padding: 3rem 5rem;
+}
+
+.booking .form h1 {
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#4169e1), to(#00bfff));
+  background-image: linear-gradient(to left bottom, #4169e1, #00bfff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+
+.booking .form .group {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.booking .form .group:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.booking .form .group input {
+  padding: 1.5rem 2rem;
+  font-family: inherit;
+  border: none;
+  font-size: 1.6rem;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  border-bottom: 3px solid transparent;
+}
+
+.booking .form .group input:focus {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  outline: none;
+  border-bottom: 3px solid #20b2aa;
+}
+
+.booking .form .group input:focus:placeholder-shown:invalid {
+  border-bottom: 3px solid orangered;
+}
+
+.booking .form .group input:placeholder-shown + label {
+  -webkit-transform: translateY(-3rem);
+          transform: translateY(-3rem);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.booking .form .group label {
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.booking .form button {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  background-image: radial-gradient(rgba(32, 178, 170, 0.5), rgba(65, 105, 225, 0.5));
+  font-size: 1.6rem;
+  color: #f0f8ff;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.booking .form button:hover {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.booking .form button:active {
+  -webkit-box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+footer {
+  padding: 3rem;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
